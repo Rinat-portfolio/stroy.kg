@@ -7,6 +7,7 @@ body, html{
 	font-family: 'helvetica';
 }
 h2{
+	color: #1E2D3B;
 	font-size: 60px;
 	text-align: center;
 	font-weight: 300;
@@ -16,7 +17,7 @@ h2{
 h4{
 	line-height: 1.1em;
     font-size: 22px;
-    color: #5A7289;
+    color: #EDCD1F;
 }
 h5{
 	font-size: 25px;
@@ -31,13 +32,12 @@ a{
 }
 header{
 	overflow: hidden;
-	height: 100vh;
-	background: url('../img/bg6.gif');
-	background-position: center center;
+	max-height: 100vh;
+	/*background: url('../img/bg.gif');*/
+/*	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: cover;
-	max-height: 800px;
+	background-size: cover;*/
 }
 img{
 	max-width: 100%;
@@ -57,6 +57,7 @@ li{
 .section-wrapp{
 	max-width: 1170px;
 	margin: auto;
+	height: 100%;
 }
 span.toServices{
 	cursor: pointer;
@@ -87,13 +88,12 @@ span.toServices{
 	flex-direction: row;
 	position: fixed;
 	z-index: 10;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: flex-end;
 	}.top-menu li{
 		color: white;
-		padding:10px;
-		margin: 0 30px;
-		font-size: 14px;
+		padding:0 40px;
+		font-size: 18px;
 		line-height: 4em;
 		display: inline-block;
 		cursor: pointer;
@@ -102,7 +102,10 @@ span.toServices{
 			margin-right: 30px;
 			text-transform: uppercase;
 			}.top-menu li:hover{
-				color: #EDCD1F;
+				color: #1E2D3B;
+				background-color: #EDCD1F;
+			}.top-menu a{
+				color: white;
 			}
 .header-content{
 	width: 100%;
@@ -113,27 +116,43 @@ span.toServices{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	}.header-content__text{
+		position: absolute;
+		
 	}
 
 .services{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	margin-top: 40px;
 	}.serv-item{
-		background-color: #F7F5F5;
+		background-color: #1E2D3B;
+		font-size: 18px;
+		color: white;
 		width: 30%;
+		border-radius: 20px;
+		transition: 0.3s all;
+		cursor: pointer;
 		}.serv-text{
 			padding: 20px 30px;
 			}.serv-item img{
-				width: 100%;
+				border-top-left-radius: 20px;
+			    width: 100%;
+			    border-top-right-radius: 20px;
+			}.serv-text li{
+				
+				list-style-type: disclosure-closed;
+				padding: 5px 0;
+			}.serv-item:hover{
+				transform: scale(1.1);
 			}
 
 .bg-fix{
-	background-color: #F7F5F5;
+	/*background-color: #F7F5F5;*/
 	display: block;
 	height: inherit;
-	width: 50%;
+	width: 100%;
 	z-index: 1;
 	content: "";
 	position: absolute;
@@ -146,26 +165,29 @@ span.toServices{
 	background-attachment: fixed;
 	background-size: cover;
 	width: 100%;
-	height: 600px;
 	overflow: hidden;
 	}.about-content-wrapp{
-		z-index: 5;
-		padding: 30px 55px;
-		position: relative;
-		width: 40%;
-		display: block;
-		background-color: #F7F5F5;
-		overflow: hidden;
-		height: 600px;
+		    z-index: 5;
+		    padding: 30px 55px;
+		    position: relative;
+		    width: 65%;
+		    height: 100%;
+		    /*margin: auto;*/
+		    display: block;
+		    background-color: #1E2D3B;
+		    overflow: hidden;
+		    color: white;
 		}.about-content-text{
 			margin-top: 50px;
 			display: block;
-			font-size: 17px;
+			font-size: 18px;
 			line-height: 1.7em;
 			text-align: left;
-			}.about h2, .about span.underline{
+			}/*.about h2, .about span.underline{
 				text-align: left;
 				margin-left: 0;
+			}*/.about-content-wrapp h2{
+				color:white;
 			}
 
 .info-about{
@@ -322,7 +344,7 @@ span.toServices{
 
 	header{
 		overflow: hidden;
-		height: 70vh;
+		/*height: 70vh;*/
 		max-height: inherit;
 	}
 	.underline{
@@ -378,7 +400,7 @@ span.toServices{
 						margin-top: 0;
 						}.about-content-text{
 							line-height: 2.5em;
-							font-size: 25px;
+							font-size: 40px;
 						}
 	.info-wrapp{
 		flex-wrap: wrap
@@ -400,7 +422,9 @@ span.toServices{
 		width: 100%;
 	}.project-item img{
 		width: 100%;
-	}
+		}.project-item__hidden{
+			font-size: 40px;
+		}
 	.client-item {
 	    width: 33%;
 	    text-align: center;	
@@ -412,7 +436,7 @@ span.toServices{
 
 	.main-form{
 		flex-direction: column;
-		font-size: 30px;
+		font-size: 40px;
 		}.form-item{
 			width: auto;
 			padding: 0 60px;
